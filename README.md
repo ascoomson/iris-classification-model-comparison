@@ -26,8 +26,7 @@ Although the dataset is numerical (sepal length, sepal width, petal length, and 
 
 ![iris_species_diagram](images/iris_species_diagram.webp)
 
-*Illustration of Iris species highlighting sepal and petal structures.*  
-*Source: Adapted from https://dev.to/vaib/hands-on-ai-for-beginners-classifying-iris-flowers-in-python-2j4h (original creator not identified).*
+*Illustration of Iris species highlighting sepal and petal structures. Source: Adapted from https://dev.to/vaib/hands-on-ai-for-beginners-classifying-iris-flowers-in-python-2j4h (original creator not identified).*
 
 ---
 
