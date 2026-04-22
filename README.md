@@ -23,11 +23,8 @@ The Iris dataset contains measurements of three distinct flower species:
 
 Although the dataset is numerical (sepal length, sepal width, petal length, and petal width), the visual differences between species help explain why this classification task is relatively well-structured.
 
-(images/iris images.jpg)
 
-| Iris Setosa                  | Iris Versicolor                      | Iris Virginica                     |
-| ---------------------------- | ------------------------------------ | ---------------------------------- |
-| ![Setosa](images/setosa.jpg) | ![Versicolor](images/versicolor.jpg) | ![Virginica](images/virginica.jpg) |
+![iris_species_diagram](images/iris_species_diagram.webp)
 
 ---
 
@@ -98,17 +95,22 @@ This ensures consistent and reproducible results across runs.
 ---
 
 ## 📁 Project Structure
+
 iris-classification-model-comparison/
 │
 ├── iris_model_comparison.py
 ├── README.md
 ├── requirements.txt
+├── images/
+│ ├── setosa.jpg
+│ ├── versicolor.jpg
+│ └── virginica.jpg
 ├── outputs/
-│   ├── iris_accuracy_comparison.png
-│   ├── confusion_matrix_decision_tree.png
-│   ├── confusion_matrix_random_forest.png
-│   ├── confusion_matrix_svm.png
-│   └── iris_model_results.csv
+│ ├── iris_accuracy_comparison.png
+│ ├── confusion_matrix_decision_tree.png
+│ ├── confusion_matrix_random_forest.png
+│ ├── confusion_matrix_svm.png
+│ └── iris_model_results.csv
 
 ---
 
@@ -129,4 +131,14 @@ python iris_model_comparison.py
 
 ## 📌 Note
 
-The Iris dataset is simple, small and highly structured, making it easy for models to achieve near-perfect accuracy. As such, results may not be replicable to more complex, noisy real-world datasets.
+The Iris dataset is simple, small and highly structured, making it easy for models to achieve near-perfect accuracy. As such, results may not be generalize to more complex, noisy real-world datasets.
+
+---
+
+## 💡Why not Deep Learning?
+
+Given the small dataset size (150 samples) and the relatively simple, structured feature space, classical machine learning models are more appropriate for this task. Models such as SVM already achieve near-perfect performance, making more complex approaches like neural networks unnecessary and potentially prone to overfitting.
+
+While deep learning models—particularly Convolutional Neural Networks (CNNs)—excel in image classification tasks, this project uses pre-engineered numerical features (sepal and petal measurements) rather than raw images. As a result, the underlying patterns are already well represented, and simpler models can effectively learn the decision boundaries.
+
+If the problem were reframed as classifying raw images of iris flowers, CNN-based approaches would be more suitable, as they can automatically learn hierarchical visual features directly from pixel data. However, for structured tabular data, classical models remain more efficient, interpretable, and appropriate.
